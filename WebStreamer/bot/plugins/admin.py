@@ -13,7 +13,7 @@ from WebStreamer.bot import StreamBot
 from WebStreamer.vars import Var
 from pyrogram import filters, Client
 from pyrogram.types import Message
-db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
+db = Database(Var.DATABASE_URL, Var.NAME)
 broadcast_ids = {}
 
 
