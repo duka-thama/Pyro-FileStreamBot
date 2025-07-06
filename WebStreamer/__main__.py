@@ -14,7 +14,6 @@ from .vars import Var
 from aiohttp import web
 from .server import web_server
 from .utils.keepalive import ping_server
-python
 import time
 import ntplib
 
