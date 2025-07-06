@@ -14,6 +14,18 @@ from .vars import Var
 from aiohttp import web
 from .server import web_server
 from .utils.keepalive import ping_server
+python
+import time
+import ntplib
+
+try:
+    client = ntplib.NTPClient()
+    response = client.request('pool.ntp.org')
+    synced_time = time.ctime(response.tx_time)
+    print(f"[INFO] Time synced: {synced_time}")
+except:
+    print("[WARN] Time sync failed, sleeping 3 seconds")
+    time.sleep(3)
 
 ppath = "WebStreamer/bot/plugins/*.py"
 files = glob.glob(ppath)
